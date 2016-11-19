@@ -2,7 +2,8 @@ FROM ubuntu:latest
 
 RUN apt-get -y update && apt-get upgrade -y
 RUN apt-get -y install --no-install-recommends git wget build-essential autoconf libtool libssl-dev \
-    gawk debhelper dh-systemd init-system-helpers pkg-config asciidoc xmlto apg libpcre3-dev vim
+    gawk debhelper dh-systemd init-system-helpers pkg-config asciidoc xmlto apg libpcre3-dev vim \
+    ca-certificates
 RUN cd 
 RUN git config --global http.sslVerify true
 RUN git clone https://github.com/shadowsocks/shadowsocks-libev.git
